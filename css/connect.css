@@ -1,0 +1,124 @@
+body{
+ width:1200px;
+  margin-left:400px;
+ padding:0;
+}
+#web {
+    padding: 18px 12px;
+     zoom: 1;
+	  overflow:hidden;
+}
+#web #left h3.title {
+    height: 40px;
+    line-height: 40px;
+    background: url(../img/webribg.jpg) no-repeat top left;
+    overflow: hidden;
+    margin-top: 3px;
+	}
+#web #left div.webcontent {
+    width: 643px;
+    background: url(../img/webriconbg.jpg) repeat-y left top;
+    padding: 10px 20px;
+    }
+	#web #left {
+    float: right;
+    width: 683px;
+    overflow: hidden;
+}
+#feedback {
+    padding: 10px;
+    text-align: center;
+	}
+table.feedback_table {
+    background: none;
+    width: 100%;
+    text-align: left;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+table.feedback_table td.feedback_submit {
+    padding: 5px 0px;
+    text-align: left;
+    padding-left: 145px;
+}
+table.feedback_table td {
+    height: 28px;
+    line-height: 28px;
+	}
+#web #left div.bottfb {
+    width: 693px;
+    height: 10px;
+    background: url(../img/webribg.jpg) no-repeat left bottom;
+    overflow: hidden;
+}
+div {
+    display: block;
+}
+#feedback {
+    padding: 10px;
+    text-align: center;
+}
+#web #right h3.Ti {
+    height: 34px;
+    background: url(../img/letitle.jpg) no-repeat right top;
+    overflow: hidden;
+    font-size: 12px;
+}
+#web #left {
+    float: right;
+    width: 883px;
+    overflow: hidden;
+}
+#web #right {
+    float: left;
+    width: 279px;
+ 
+   overflow: hidden;
+}
+#web #right h3.Ti span {
+    display: block;
+    width: 129px;
+    height: 34px;
+    background: url(../img/letitle.jpg) no-repeat left top;
+    color: #fff;
+    line-height: 25px;
+    overflow: hidden;
+    text-align: center;
+ }
+ #footer {
+    height: 50px;
+    background: url(../img/footbg.jpg) repeat-x left top;
+    overflow: hidden;
+    color: #fff;
+    padding: 0px 45px;
+    margin-bottom: 0px;
+}
+#footer div.nav {
+    width: 48%;
+    height: 50px;
+    line-height: 50px;
+    overflow: hidden;
+}
+#footer div.text {
+    width: 48%;
+    overflow: hidden;
+    text-align: right;
+}
+.floatr {
+    float: right;
+	color:#fff;
+}
+
+#footer div.nav a {
+    color: #fff;
+}
+.clear {
+    clear: both;
+}
+ 
+.powered_by_metinfo {
+    padding-top: 14px;
+}
+ 

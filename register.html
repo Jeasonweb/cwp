@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>注册</title>
+    <!-- 设置 viewport -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- 引入自定义样式文件 -->
+    <link rel="stylesheet" href="css/register.css"/>
+    <script src="js/jquery-1.11.3.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.static.runoob.com/libs/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://cdn.static.runoob.com/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://cdn.static.runoob.com/libs/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <style>
+        .label{
+            text-align: right;
+            vertical-align: top;
+            font-size: 14px ;
+            font-weight: bold;
+            padding: 5px 1em;
+            color: #000;
+        }
+    </style>
+</head>
+<body>
+    <div class="container img">
+        <img src="images/pictures/logo.png" alt="">
+    </div>
+    <div class="container"style="margin-top:25px;">
+        <table id="lit" class="table ttb">
+            <tr>
+                <td class="font-first">
+                    <button type="button" class="btn" data-dismiss="modal">1</button>
+                    设置用户名
+                </td>
+                <td class="font-back">
+                    <button type="button" class="btn" data-dismiss="modal">2</button>
+                    填写账号信息
+                </td>
+                <td class="font-back">
+                    <button type="button" class="btn" data-dismiss="modal">3</button>
+                    密码设置
+                </td >
+                <td class="font-back">
+                    <button type="button" class="btn" data-dismiss="modal">4</button>
+                    注册成功
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div id="tabbody-div"style="margin-top:30px;">
+        <form name="main_form" method="POST" action="__SELF__" enctype="multipart/form-data" class="fm form-horizontal" role="form">
+            <!-- 基本信息 -->
+            <table class="table table_content1" cellspacing="1" cellpadding="3" width="100%">
+                <tr>
+                    <td class="label col-xs-3 col-sm-5 col-md-5 col-lg-5">手机号：</td>
+                    <td>
+                        <select name="cat_id">
+                            <option value="">中国大陆   +86</option>
+                            <option value="要求退款">中国台湾地区   +886</option>
+                            <option value="要求退款">中国香港   +852</option>
+                        </select>
+                        <input id="phone" size="20" type="text" name="phone" value="" />
+                        <span id="mo" class="required">*</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="label col-xs-3 col-sm-3 col-md-3 col-lg-3">&nbsp;</td>
+                    <td>
+                        <button id="next" class="btn  bt btn-lg logins mobile" type="button"  >下一步</button>
+                    </td>
+                </tr>
+            </table>
+        <div class="container ph">
+            <div class="row">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <a style="background-color: #9999; color:#ff4400;"   class="btn btb cls btn-lg pull-right" role="button">×</a>
+                        <h4>验证手机</h4>
+                    </div>
+                    <div class="modal-body">
+                        <p><span class="glyphicon glyphicon-record"></span>校验码已发送到您的手机，15分钟内有效，请勿泄露</p>
+                       <table class="table tabl">
+                           <tr>
+                               <td class="label lb col-xs-3 col-sm-3 col-md-3 col-lg-3">手机号：</td>
+                               <td>
+                                   <input style="border:0;" size="20" type="text" name="goods_name" readonly value="13146702588" />
+                               </td>
+                           </tr>
+                           <tr>
+                               <td class="label lb col-xs-3 col-sm-3 col-md-3 col-lg-3">验证码：</td>
+                               <td>
+                                   <input size="10" type="text" class="very" name="goods_name" value="" />
+                                   <button href="javascript:;" type="button" class="btn btt send1" onclick="sends.send();">获取验证码</button>
+                                   <span id="r" class="require"></span>
+                               </td>
+                           </tr>
+                           <tr>
+                               <td class="label lb col-xs-3 col-sm-3 col-md-3 col-lg-3">&nbsp;</td>
+                               <td>
+                                   <button style="width:150px;padding:5px 16px;" type="button" class="btn btn-lg bt sure verify">确认</button>
+                               </td>
+                           </tr>
+                       </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container table_content2"style="display:none;">
+            <div class="modal-header">
+                <a style="background-color: #9999; color:#ff4400;"   class="btn btb sur btn-lg pull-right" role="button">×</a>
+                <h4>验证手机</h4>
+            </div>
+            <table class="table" cellspacing="1" cellpadding="3" width="100%">
+                <tr>
+                    <td class="label col-xs-3 col-sm-5 col-md-5 col-lg-5">账户昵称：</td>
+                    <td>
+                        <input id="name" size="20" type="text" name="name" value="" />
+                       <span id="rees" class="require">昵称为中文、英文或数字组成</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="label col-xs-3 col-sm-5 col-md-5 col-lg-5">密码：</td>
+                    <td>
+                        <input id="pwd" size="20" type="password" name="pwd" value="" />
+                        <span id="ree" class="require">密码有6-12位字母、数字或特殊字符组成</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="label col-xs-3 col-sm-5 col-md-5 col-lg-5">确认密码：</td>
+                    <td>
+                        <input id="rpwd" size="20" type="password" name="rpassword" value="" />
+                        </span><span id="re" class="requir"></span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="label col-xs-3 col-sm-3 col-md-3 col-lg-3">&nbsp;</td>
+                    <td>
+                        <button class="btn bt btn-lg logins sub"  type="button">提交</button>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        </form>
+        <div class="container success" style="text-align:center;display:none;">
+            <div class="row last">
+                <button type="button" class="btn cbtn" data-dismiss="modal"><span class="glyphicon glyphicon-ok"></span></button>
+                恭喜你注册成功！
+            </div>
+            <a style="background-color: #9999; color:#ff4400;" href="login.html" class="btn btn-lg logn" role="button">立即登录</a>
+        </div>
+    </div>
+    
+    <!-- 模态框（Modal） -->
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <a style="background-color: #9999; color:#ff4400;" href="index.html" class="btn btn-lg pull-right" role="button">×</a>
+                    <h4>注册协议</h4>
+                </div>
+                <div class="modal-body">
+                    <p><strong>【审慎阅读】</strong>您在申请注册流程中点击同意前，应当认真阅读以下协议。<strong style="text-decoration: underline">请您务必审慎阅读、充分理解协议中相关条款内容，其中包括：</strong></p>
+                    <p>1、<strong style="text-decoration: underline">与您约定免除或限制责任的条款；</strong></p>
+                    <p>2、<strong style="text-decoration: underline">与您约定法律适用和管辖的条款；</strong></p>
+                    <p>3、<strong style="text-decoration: underline">其他以粗体下划线标识的重要条款。</strong></p>
+                    <p>如您对协议有任何疑问，可向平台客服咨询。</p>
+                    <p><strong>【特别提示】</strong>当您按照注册页面提示填写信息、阅读并同意协议且完成全部注册程序后，即表示您已充分阅读、理解并接受协议的全部内容。如您因平台服务与烨伟商城发生争议的，适用《烨伟商城平台服务协议》处理。如您在使用平台服务过程中与其他用户发生争议的，依您与其他用户达成的协议处理。</p>
+                    <p><strong style="text-decoration: underline">阅读协议的过程中，如果您不同意相关协议或其中任何条款约定，您应立即停止注册程序。</strong></p>
+
+
+                    <p><a href="#" target="_blank">《烨伟服务协议》</a></p>
+                    <p><a href="#" target="_blank">《法律声明及隐私权政策》</a></p>
+                    <p><a href="#" target="_blank">《支付服务协议》</a></p>
+                </div>
+                <div class="modal-footer">
+                    <p style="text-align: center">
+                        <button type="button" class="btn btns btn-large" data-dismiss="modal">同意协议</button>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--
+            TODO 页脚
+        -->
+    <nav class="navbar navbar-fixed-bottom">
+        <div class="navbar-inner navbar-content-center">
+            <!-- TODO 第一行 -->
+            <div class="row ls" style="text-align:center">
+                <div class="col-md-2 col-sm-4 col-xs-4">
+                    <ul class="list-unstyled">
+                        <li><h5>服务中心</h5></li>
+                        <li><a href="#">产品报价咨询</a></li>
+                        <li><a href="#">公司最新动态</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-2 col-sm-4 col-xs-4">
+                    <ul class="list-unstyled">
+                        <li><h5>解决方案</h5></li>
+                        <li><a href="#">联系客服</a></li>
+                        <li><a href="#">在线留言</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-2 col-sm-4 col-xs-4">
+                    <ul class="list-unstyled">
+                        <li><h5>产品中心</h5></li>
+
+                        <li><a href="#">国际快递</a></li>
+                        <li><a href="#">货运保险</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-2 col-sm-4 col-xs-4">
+                    <ul class="list-unstyled">
+                        <li><h5>服务支持</h5></li>
+                        <li><a href="#">服务理念</a></li>
+                        <li><a href="#">技术支持</a></li>
+
+                    </ul>
+                </div>
+                <div class="col-md-2 col-sm-4 col-xs-4">
+                    <ul class="list-unstyled">
+                        <li><h5>新闻动态</h5></li>
+                        <li><a href="#">公司新闻</a></li>
+                        <li><a href="#">行业动态</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-2 col-sm-4 col-xs-4">
+                    <ul class="list-unstyled">
+                        <li><h5>联系我们</h5></li>
+                        <li><a href="#">联系我们</a></li>
+                        <li><a href="#">人才招聘</a></li>
+                    </ul>
+                </div>
+
+            </div>
+            <!-- TODO 页脚内容 -->
+            <div class="row">
+                <div class="col-md-12 col-sm-12 col-xs-12">
+                    <p style="text-align:center;">河南烨伟版权所&nbsp;豫ICP备15033706号&nbsp; <img height="20px" width="20px" src="images/pictures/zzgs_icon.jpg" alt="">	Copyright&copy2011-2017 yeweijiguang.com.</p>
+                </div>
+            </div>
+
+        </div>
+    </nav>
+
+    </body>
+        <script>
+            function color(i){
+                //alert(i)
+                var bin = $("#lit tr td:eq("+(++i)+")");
+                $(".font-first").removeClass("font-first").addClass("font-back");
+                bin.removeClass("font-back").addClass("font-first");
+
+            }
+
+
+            $("div#tabbody-div .btb ").click(function(){
+                var i=$("div#tabbody-div .btb ").index(this);
+                var bins = $("#lit tr td:eq("+(++i-1)+")");
+                $(".font-first").removeClass("font-first").addClass("font-back");
+                bins.removeClass("font-back").addClass("font-first");
+
+            });
+            $(".sure").click(function(){
+                $(".ph").hide(1000);
+                $(".table_content2").show(1000);
+            });
+
+            $(".cls").click(function(){
+                $(".ph").hide(1000);
+                $(".table_content1").show(1000);
+            });
+            $(".sur").click(function(){
+                $(".table_content2").hide(1000);
+                $(".ph").show(1000);
+            });
+
+
+        $(function () { $('#myModal').modal({
+            keyboard: true
+        })});
+        //验证手机号
+            $(".mobile").click(function(){
+
+                var phone = document.getElementById("phone").value;
+                var reg =/^[1][3,4,5,7,8,]\d{9}$/;
+                if(phone==''){
+                    document.getElementById("mo").innerHTML="请输入电话号码！";
+                    return;
+                }else if(reg.test(phone)){
+                    var i=$("div#tabbody-div .bt ").index(this);
+                    color(i);
+                    $(".table_content1").hide(1000);
+                    $(".ph").show(1000);
+
+                }else{
+                    document.getElementById("mo").innerHTML="电话号码不正确！";
+                    return;
+                }
+
+            });
+            //获取验证码
+            var sends = {
+                checked:1,
+                send:function() {
+                    var time = 30;
+                    
+              
+                    $('.div-phone span').remove();
+                    function timeCountDown() {
+                        if (time == 0) {
+                            clearInterval(timer);
+                            $('.btt').addClass('send1').removeClass('send0').html("重新发送验证码");
+                            sends.checked=1;
+                            return true;
+                        }
+                        $('.btt').html(time + "S后再次发送");
+                        time--;                        
+                        return false;
+                       
+                    }
+					
+                    $('.btt').addClass('send0').removeClass('send1');
+                    var phone = $("#phone").val();
+                    var id="30599";
+                    var myKey="aca7bdc787f6f15014be509b20aa0052";
+                    var ctn="您的验证码是#code#=333344,如非本人操作，请忽略本短信";
+                    /*var ctnStr='';
+                    var tempArr=ctn.split('#');
+                    	for(var i=0;i<tempArr.length;i++){
+                    		ctnStr+=encodeURI(tempArr[i]);
+                    	}*/
+                    	ctn=encodeURI(ctn);
+                    	postDataFromClient(phone,id,ctn,function(jsonData){
+                    		alert('进入失败函数');                   		
+                    		
+                    	},function(jsonData){
+                    		//{"reason":"操作成功","result":{"sid":"1000323122225389200","fee":1,"count":1},"error_code":0}
+                    		
+                    		alert('网络出错');
+                    	});
+                    var timer = setInterval(timeCountDown, 1000);
+
+                }
+            };
+            //校验验证码
+            $(".verify").click(function(){
+                var phone = document.getElementById("phone").value;
+                //var verifyCode = document.getElementById("verify").value;
+                var i=$("div#tabbody-div .bt ").index(this);
+                console.log(i);
+                color(i);
+                $(".ph").hide(1000);
+                $(".table_content2").show(1000);
+            });
+            //(2)检测用户名
+            $(function(){
+                $('#name').blur(function(){
+                    $('#rees').html("");
+                    var name = $('#name').val();
+                    //0:判断字符長度
+                    var len = 0;
+                    for(var i=0;i<name.length;i++){
+                        var length = name.charCodeAt(i);
+                        if(length>=0&&length<=128){
+                            len+=1;
+                        }else{
+                            len+=2;
+                        }
+                    }
+                    //1:判断用户名是否为空
+                    if(name==""){
+                        $('#rees').html('用户名不能为空');
+                        return;
+                    }
+                    //2:检测有户名是否合法
+                    var name_reg =/^[0-9a-zA-Z\S\W]{2,12}$/;
+                    if(name_reg.test(name)&&len>=4){
+                        nickname_flag=true;
+                    }else{
+                        $('#rees').html('用户名不合法');
+                    }
+
+                });
+            });
+            //检验密码
+            $(function(){
+
+                $('#pwd').blur(function(){
+                    $('#ree').html('');
+                    var password = $('#pwd').val();
+                    //1:检测密码是否为空
+                    if(password==""){
+                        $('#ree').html('密码不能为空');
+                        return;
+                    }
+                    //2：检测密码格式是否正确
+                    var password_reg = /^[a-zA-Z\d+]{6,20}$/;
+                    if(!password_reg.test(password)){
+                        $('#ree').html('密码不符合规则');
+                        return;
+                    }
+
+                });
+                $('#rpwd').blur(function(){
+                    $('#re').html('');
+                    var password = $('#pwd').val();
+                    var repeatPass = $('#rpwd').val();
+                    //3:检测第二次输入的密码是否于第一次的相等
+                    if(repeatPass!=password){
+                        $('#re').html('两次输入的密码不一样');
+                        return;
+                    }else{
+                        password_flag = true;
+                    }
+                });
+            });
+
+            //输入密码
+            $(".sub").click(function(){
+                //alert(name);
+                var phone = $("#phone").val();
+                var name = $('#name').val();
+                var password = $('#pwd').val();
+                var i=$("div#tabbody-div .bt ").index(this);
+                color(i);
+                $(".table_content2").hide(1000);
+                $(".success").show(1000);
+            });
+			//从服务器端获取数据
+			
+			function postDataFromClient(phone, id,ctn,successFunction,failFunction) {
+			    $.ajax({
+			        type: "get",
+			        url: "http://v.juhe.cn/sms/send?key=aca7bdc787f6f15014be509b20aa0052&mobile="+phone+"&tpl_id="+id+"&tpl_value="+ctn,
+			        async: true,
+			        dataType: "json",
+			        error: failFunction,
+			        success: successFunction
+			    })
+			}
+
+        </script>
+</html>

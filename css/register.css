@@ -1,0 +1,142 @@
+.img{
+    margin-top:10px;
+    margin-bottom:10px;
+}
+.tb-nopadding{
+    margin-left:0 !important;
+    margin-right:0 !important;
+}
+.ks-dialog {
+    width: 680px;
+    margin: 0 auto;
+    padding: 20px;
+    color: #3e3e3e;
+    border: 2px solid #dedede;
+    border-top: 2px solid #ff4a00;
+    background-color: #FFF;
+    position: absolute;
+    z-index: 999999;
+}
+.table_content tr td{
+    padding-bottom:5px;
+}
+.label {
+    text-align: right;
+    vertical-align: top;
+    font-size: 14px;
+    font-weight: bold;
+    padding: 5px 1em;
+    color: #000;
+}
+.required{
+    color:#ff4400;
+}
+.require,.requireds,.requir{
+    color:#7F7F7F;
+}
+.btn:focus, .btn:hover {
+    color: #fff !important;
+}
+.logins{
+    width:175px;
+    height:38px;
+    background-color: #ff4001;
+    color:#fff;
+}
+.bt{
+    background-color: #ff4001;
+    color:#fff;
+}
+.btns{
+    background-color: #ff4001;
+    color:#fff;
+}
+.modal-body p:nth-child(8) a,.modal-body p:nth-child(9) a,.modal-body p:nth-child(10) a{
+    color:#000;
+    font-weight:bold;
+}
+.phone{
+    background-color: #00a0e9;
+}
+.btt{
+    padding: 3px 11px;
+    margin-left:5px;
+    background-color: #ff4401;
+    color:#fff;
+}
+.tabl tr tb{
+    margin-top:10px;
+    margin-bottom:5px;
+}
+.table tr td,.table tr th{
+    border-top:none !important;
+    border-left:none !important;
+    border-right:none !important;
+}
+.ttb{
+    border-bottom:2px solid #E6E6E6;
+}
+.ttb tr td{
+    border-top:none !important;
+}
+.font-first{
+    border-bottom:2px solid #ff4400;
+}
+.font-first button{
+    padding: 3px 11px;
+    margin-left:5px;
+    background-color: #ff4401;
+    color:#fff;
+    border-radius: 50% !important;
+    cursor: pointer;
+}
+.font-back button{
+    padding: 3px 11px;
+    margin-left:5px;
+    background-color: #CCCCCC;
+    color:#fff;
+    border-radius: 50% !important;
+    cursor: pointer;
+}
+.ttb tr td{
+    text-align:center;
+}
+.ph{
+    top: -21px;
+    position: relative;
+    display:none;
+}
+.last .btn{
+    padding: 3px 11px;
+    margin-left: 5px;
+    background-color: #5CB85C;
+    color: #fff;
+    border-radius: 50% !important;
+    cursor: pointer;
+
+}
+.logn{
+    background-color: #ff4400;
+    color: #fff !important;
+    margin-top: 20px;
+}
+.igm{
+    display:none!important;
+}
+.colo{
+    color:#ff4400;
+}
+.colors{
+    display:none;
+}
+.cbtn{
+    background-color: #5CB85C;
+    border-radius: 50%;
+}
+.ls div ul li a{
+    color:#999;
+    text-decoration:none;
+}
+.ls div ul li a:hover{
+    font-weigth:bold important;
+}
